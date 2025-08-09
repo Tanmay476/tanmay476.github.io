@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Name - Hardware Engineering Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <nav>
@@ -17,25 +18,25 @@
   <header>
     <img src="/assets/profile-photo.jpg" alt="Your Name" class="profile-photo">
     <h1>Your Name</h1>
-    <p>Computer Engineering Student | Georgia Tech</p>
-    <p>
-      <a href="mailto:your.email@gatech.edu">your.email@gatech.edu</a> |
-      <a href="https://linkedin.com/in/yourprofile">LinkedIn</a> |
-      <a href="https://github.com/yourusername">GitHub</a>
-    </p>
+    <p class="tagline">Computer Engineering Student | Georgia Tech</p>
+    <div class="header-links">
+      <a href="mailto:your.email@gatech.edu"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/yourprofile"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/yourusername"><i class="fab fa-github"></i></a>
+    </div>
   </header>
   <div class="container">
-    <section class="bio">
+    <section class="bio card">
       <h2>About Me</h2>
       <p>I am a [year, e.g., third-year] Computer Engineering student at Georgia Tech, passionate about designing innovative hardware solutions. My expertise spans embedded systems, microcontroller programming, and hardware-software integration, with hands-on experience in Mbed, C++, and circuit design. Explore my projects to see my work in action, including an Mbed-based game and a servo motor controller.</p>
     </section>
-    <section class="skills">
+    <section class="skills card">
       <h2>Skills</h2>
-      <ul>
-        <li><strong>Programming:</strong> C++, VHDL, Verilog, Python</li>
-        <li><strong>Hardware Tools:</strong> Mbed OS, KiCad, Vivado, LTspice, Oscilloscope</li>
-        <li><strong>Other:</strong> Git, PCB Design, Circuit Debugging, Sensor Interfacing</li>
-      </ul>
+      <div class="skill-grid">
+        <div class="skill-item"><i class="fas fa-code"></i> C++, VHDL, Verilog, Python</div>
+        <div class="skill-item"><i class="fas fa-tools"></i> Mbed OS, KiCad, Vivado, LTspice</div>
+        <div class="skill-item"><i class="fas fa-cogs"></i> Git, PCB Design, Circuit Debugging</div>
+      </div>
     </section>
   </div>
   <footer>
