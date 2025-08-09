@@ -1,67 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name - Projects</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects • Tanmay Shane Snyder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="projects.html" class="active">Projects</a></li>
-    </ul>
-  </nav>
-  <div class="container">
-    <div class="resume-content">
-      <section class="projects">
-        <h2>Projects</h2>
-        <div class="project">
-          <h3>Mbed-Based Interactive Game</h3>
-          <p><strong>Description:</strong> Developed an interactive game [e.g., a reflex-based game or maze] on an Mbed microcontroller platform, using an LCD display and user input via buttons or sensors.</p>
-          <p><strong>Technologies:</strong> Mbed OS, C++, LCD Display, GPIO, Sensors [e.g., accelerometer]</p>
-          <p><strong>Challenges & Solutions:</strong> Faced timing issues with display updates; implemented interrupt-driven input handling to improve responsiveness by 40%.</p>
-          <p><strong>Outcome:</strong> Created a fully functional game with smooth user interaction and low-latency display updates.</p>
-          <p><strong>Links:</strong> <a href="https://github.com/yourusername/mbed-game">GitHub Repo</a> | <a href="[link-to-video-or-demo]">Demo Video</a></p>
-          <video controls>
-            <source src="/assets/mbed-game-demo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div class="project">
-          <h3>Servo Peripheral Controller</h3>
-          <p><strong>Description:</strong> Designed a servo motor control system using an Mbed microcontroller to manage precise angular movements for a robotic arm or similar application.</p>
-          <p><strong>Technologies:</strong> Mbed OS, C++, PWM, Servo Motors, Oscilloscope</p>
-          <p><strong>Challenges & Solutions:</strong> Overcame jitter in servo movements by optimizing PWM signal timing, reducing positioning error to under 2 degrees.</p>
-          <p><strong>Outcome:</strong> Achieved reliable control of multiple servos with smooth operation for dynamic tasks.</p>
-          <p><strong>Links:</strong> <a href="https://github.com/yourusername/servo-peripheral">GitHub Repo</a> | <a href="[link-to-video-or-demo]">Prototype Video</a></p>
-          <img src="/assets/servo-circuit.png" alt="Servo Peripheral Circuit">
-        </div>
-        <div class="project">
-          <h3>[Placeholder: Custom Hardware Project]</h3>
-          <p><strong>Description:</strong> [e.g., Designed a PCB for a low-power sensor node using KiCad, integrating an Mbed microcontroller for data processing.]</p>
-          <p><strong>Technologies:</strong> [e.g., KiCad, Mbed OS, C++, I2C/SPI]</p>
-          <p><strong>Challenges & Solutions:</strong> [e.g., Mitigated signal interference by redesigning PCB traces, improving signal integrity by 30%.]</p>
-          <p><strong>Outcome:</strong> [e.g., Deployed a functional sensor node with 24-hour battery life.]</p>
-          <p><strong>Links:</strong> <a href="https://github.com/yourusername/project-name">GitHub Repo</a> | <a href="[link-to-report-or-image]">Schematic PDF</a></p>
-          <img src="/assets/placeholder-project.png" alt="Project Schematic">
-        </div>
-      </section>
-      <aside class="sidebar">
-        <img src="/assets/profile-photo.jpg" alt="Your Name" class="profile-photo">
-        <div class="contact-links">
-          <p><a href="mailto:your.email@gatech.edu">your.email@gatech.edu</a></p>
-          <p><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></p>
-          <p><a href="https://github.com/yourusername">GitHub</a></p>
-        </div>
-      </aside>
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="brand" href="index.html">TS</a>
+      <button class="nav-toggle" aria-label="Open Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Projects</h1>
+      <p class="sub">A showcase of my technical work</p>
     </div>
-  </div>
-  <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </section>
+
+  <main class="container projects-grid">
+    <div class="card">
+      <img src="assets/robot.jpg" alt="Wireless Controllable Robot" />
+      <div class="card-body">
+        <h3>Wireless Controllable Robot</h3>
+        <p>Dual-mode robot capable of autonomous line-following and manual wireless control using NRF24L01 modules.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/doorlock.jpg" alt="Automated Door Lock" />
+      <div class="card-body">
+        <h3>Automated Door Lock</h3>
+        <p>Arduino-based fingerprint and keypad-controlled door lock system for secure access.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/kicad.jpg" alt="PCB Design" />
+      <div class="card-body">
+        <h3>Custom PCB Design</h3>
+        <p>Designed PCB layouts in KiCad for embedded systems, optimizing space and signal routing.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Tanmay Shane Snyder</p>
+      <div class="footer-links">
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+      </div>
+    </div>
   </footer>
-  <script src="script.js"></script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.nav-toggle').addEventListener('click', () =>
+      document.querySelector('.nav-list').classList.toggle('open')
+    );
+  </script>
 </body>
 </html>
