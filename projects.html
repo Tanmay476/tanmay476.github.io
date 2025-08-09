@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Name - Projects</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <nav>
@@ -15,48 +16,48 @@
     </ul>
   </nav>
   <div class="container">
-    <div class="resume-content">
-      <section class="projects">
+    <div class="projects-content">
+      <aside class="sidebar">
+        <img src="/assets/profile-photo.jpg" alt="Your Name" class="profile-photo">
+        <div class="contact-links">
+          <p><a href="mailto:your.email@gatech.edu"><i class="fas fa-envelope"></i> your.email@gatech.edu</a></p>
+          <p><a href="https://linkedin.com/in/yourprofile"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+          <p><a href="https://github.com/yourusername"><i class="fab fa-github"></i> GitHub</a></p>
+        </div>
+      </aside>
+      <section class="projects card">
         <h2>Projects</h2>
-        <div class="project">
+        <div class="project card">
           <h3>Mbed-Based Interactive Game</h3>
           <p><strong>Description:</strong> Developed an interactive game [e.g., a reflex-based game or maze] on an Mbed microcontroller platform, using an LCD display and user input via buttons or sensors.</p>
           <p><strong>Technologies:</strong> Mbed OS, C++, LCD Display, GPIO, Sensors [e.g., accelerometer]</p>
           <p><strong>Challenges & Solutions:</strong> Faced timing issues with display updates; implemented interrupt-driven input handling to improve responsiveness by 40%.</p>
           <p><strong>Outcome:</strong> Created a fully functional game with smooth user interaction and low-latency display updates.</p>
-          <p><strong>Links:</strong> <a href="https://github.com/yourusername/mbed-game">GitHub Repo</a> | <a href="[link-to-video-or-demo]">Demo Video</a></p>
-          <video controls>
+          <p class="project-links"><a href="https://github.com/yourusername/mbed-game"><i class="fab fa-github"></i> GitHub Repo</a> | <a href="[link-to-video-or-demo]"><i class="fas fa-video"></i> Demo Video</a></p>
+          <video controls class="project-media">
             <source src="/assets/mbed-game-demo.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
-        <div class="project">
+        <div class="project card">
           <h3>Servo Peripheral Controller</h3>
           <p><strong>Description:</strong> Designed a servo motor control system using an Mbed microcontroller to manage precise angular movements for a robotic arm or similar application.</p>
           <p><strong>Technologies:</strong> Mbed OS, C++, PWM, Servo Motors, Oscilloscope</p>
           <p><strong>Challenges & Solutions:</strong> Overcame jitter in servo movements by optimizing PWM signal timing, reducing positioning error to under 2 degrees.</p>
           <p><strong>Outcome:</strong> Achieved reliable control of multiple servos with smooth operation for dynamic tasks.</p>
-          <p><strong>Links:</strong> <a href="https://github.com/yourusername/servo-peripheral">GitHub Repo</a> | <a href="[link-to-video-or-demo]">Prototype Video</a></p>
-          <img src="/assets/servo-circuit.png" alt="Servo Peripheral Circuit">
+          <p class="project-links"><a href="https://github.com/yourusername/servo-peripheral"><i class="fab fa-github"></i> GitHub Repo</a> | <a href="[link-to-video-or-demo]"><i class="fas fa-video"></i> Prototype Video</a></p>
+          <img src="/assets/servo-circuit.png" alt="Servo Peripheral Circuit" class="project-media">
         </div>
-        <div class="project">
+        <div class="project card">
           <h3>[Placeholder: Custom Hardware Project]</h3>
           <p><strong>Description:</strong> [e.g., Designed a PCB for a low-power sensor node using KiCad, integrating an Mbed microcontroller for data processing.]</p>
           <p><strong>Technologies:</strong> [e.g., KiCad, Mbed OS, C++, I2C/SPI]</p>
           <p><strong>Challenges & Solutions:</strong> [e.g., Mitigated signal interference by redesigning PCB traces, improving signal integrity by 30%.]</p>
           <p><strong>Outcome:</strong> [e.g., Deployed a functional sensor node with 24-hour battery life.]</p>
-          <p><strong>Links:</strong> <a href="https://github.com/yourusername/project-name">GitHub Repo</a> | <a href="[link-to-report-or-image]">Schematic PDF</a></p>
-          <img src="/assets/placeholder-project.png" alt="Project Schematic">
+          <p class="project-links"><a href="https://github.com/yourusername/project-name"><i class="fab fa-github"></i> GitHub Repo</a> | <a href="[link-to-report-or-image]"><i class="fas fa-file"></i> Schematic PDF</a></p>
+          <img src="/assets/placeholder-project.png" alt="Project Schematic" class="project-media">
         </div>
       </section>
-      <aside class="sidebar">
-        <img src="/assets/profile-photo.jpg" alt="Your Name" class="profile-photo">
-        <div class="contact-links">
-          <p><a href="mailto:your.email@gatech.edu">your.email@gatech.edu</a></p>
-          <p><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></p>
-          <p><a href="https://github.com/yourusername">GitHub</a></p>
-        </div>
-      </aside>
     </div>
   </div>
   <footer>
