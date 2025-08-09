@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Name - Resume</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <nav>
@@ -16,15 +17,23 @@
   </nav>
   <div class="container">
     <div class="resume-content">
-      <section class="resume-main">
+      <aside class="sidebar">
+        <img src="/assets/profile-photo.jpg" alt="Your Name" class="profile-photo">
+        <div class="contact-links">
+          <p><a href="mailto:your.email@gatech.edu"><i class="fas fa-envelope"></i> your.email@gatech.edu</a></p>
+          <p><a href="https://linkedin.com/in/yourprofile"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+          <p><a href="https://github.com/yourusername"><i class="fab fa-github"></i> GitHub</a></p>
+        </div>
+      </aside>
+      <section class="resume-main card">
         <h2>Resume</h2>
         <h3>Resume Preview</h3>
         <div class="pdf-preview">
           <embed src="/assets/resume.pdf#page=1" type="application/pdf">
         </div>
-        <p><a href="/assets/resume.pdf">Download Full Resume (PDF)</a></p>
+        <p class="download-link"><a href="/assets/resume.pdf">Download Full Resume (PDF) <i class="fas fa-download"></i></a></p>
         <h3>Relevant Coursework</h3>
-        <ul>
+        <ul class="course-list">
           <li>ECE 2035: Programming for Hardware/Software Systems</li>
           <li>ECE 2036: Engineering Software Design</li>
           <li>ECE 3056: Architecture, Systems, and Networks</li>
@@ -32,14 +41,6 @@
           <li>ECE 4180: Embedded Systems Design</li>
         </ul>
       </section>
-      <aside class="sidebar">
-        <img src="/assets/profile-photo.jpg" alt="Your Name" class="profile-photo">
-        <div class="contact-links">
-          <p><a href="mailto:your.email@gatech.edu">your.email@gatech.edu</a></p>
-          <p><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></p>
-          <p><a href="https://github.com/yourusername">GitHub</a></p>
-        </div>
-      </aside>
     </div>
   </div>
   <footer>
