@@ -101,55 +101,21 @@ header .tagline {
   color: #1a3c5e;
   border-bottom: 3px solid #2a6b9b;
   padding-bottom: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-weight: 700;
 }
-.bio-content {
+.bio p {
   line-height: 1.8;
+  margin-bottom: 15px;
+  color: #333;
 }
-.bio-content .intro {
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-bottom: 25px;
-  color: #1a3c5e;
-  padding: 15px;
-  background: linear-gradient(135deg, #e0eaff, #f0f4f8);
-  border-radius: 8px;
-  border-left: 4px solid #2a6b9b;
+.bio ul {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  padding-left: 25px;
 }
-.bio-section {
-  margin-bottom: 20px;
-  padding: 15px;
-  background: #f9f9f9;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-.bio-section:hover {
-  background: #f0f4f8;
-}
-.bio-section h3 {
-  color: #2a6b9b;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-.bio-section h3 i {
-  margin-right: 10px;
-}
-.achievements {
-  list-style: none;
-  padding-left: 0;
-}
-.achievements li {
-  padding: 8px 0 8px 25px;
-  position: relative;
-}
-.achievements li:before {
-  content: "\2713";
-  position: absolute;
-  left: 0;
-  color: #2a6b9b;
-  font-weight: bold;
-  font-size: 1.2rem;
+.bio ul li {
+  margin-bottom: 8px;
 }
 .project {
   margin-bottom: 30px;
@@ -197,10 +163,15 @@ header .tagline {
 .project-links i {
   margin-right: 5px;
 }
-.resume-content, .projects-content {
+.resume-content {
   display: flex;
   gap: 30px;
   flex-direction: row-reverse;
+}
+.projects-content {
+  display: flex;
+  gap: 30px;
+  flex-direction: row;
 }
 .resume-main, .projects {
   flex: 3;
@@ -260,37 +231,29 @@ header .tagline {
 .contact-links i {
   margin-right: 8px;
 }
-.skills-container {
-  display: flex;
-  flex-direction: column;
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   margin-top: 15px;
 }
-.skill-category {
+.skill-item {
   background: linear-gradient(135deg, #f0f4f8, #e0eaff);
   padding: 20px;
   border-radius: 10px;
-  border-left: 4px solid #2a6b9b;
+  text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid #2a6b9b;
+  line-height: 1.8;
 }
-.skill-category:hover {
-  transform: translateX(5px);
-  box-shadow: 0 4px 15px rgba(42, 107, 155, 0.2);
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(42, 107, 155, 0.2);
 }
-.skill-category h3 {
-  color: #1a3c5e;
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-.skill-category h3 i {
+.skill-item i {
   margin-right: 10px;
   color: #2a6b9b;
-}
-.skill-category p {
-  margin: 0;
-  line-height: 1.8;
-  color: #444;
+  font-size: 1.2rem;
 }
 .course-list, .projects ul {
   margin: 10px 0;
@@ -381,10 +344,10 @@ html {
   .pdf-preview {
     padding-bottom: 150%; /* Ensures full visibility on mobile */
   }
-  .skill-category {
-    padding: 15px;
+  .skill-grid {
+    grid-template-columns: 1fr;
   }
-  .skill-category h3 {
-    font-size: 1rem;
+  .skill-item {
+    padding: 15px;
   }
 }
