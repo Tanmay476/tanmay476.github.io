@@ -133,12 +133,19 @@ header .tagline {
   color: #1a3c5e;
   font-size: 1.5rem;
 }
+.project-images {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
 .project-media {
   max-width: 400px;
   max-height: 300px;
   border: 2px solid #e0eaff;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
 }
 .project-media:hover {
   transform: scale(1.02);
