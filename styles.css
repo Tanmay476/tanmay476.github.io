@@ -231,29 +231,37 @@ header .tagline {
 .contact-links i {
   margin-right: 8px;
 }
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+.skills-container {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
   margin-top: 15px;
 }
-.skill-item {
+.skill-category {
   background: linear-gradient(135deg, #f0f4f8, #e0eaff);
   padding: 20px;
   border-radius: 10px;
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-left: 4px solid #2a6b9b;
-  line-height: 1.8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.skill-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(42, 107, 155, 0.2);
+.skill-category:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(42, 107, 155, 0.2);
 }
-.skill-item i {
+.skill-category h3 {
+  color: #1a3c5e;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.skill-category h3 i {
   margin-right: 10px;
   color: #2a6b9b;
-  font-size: 1.2rem;
+}
+.skill-category p {
+  margin: 0;
+  line-height: 1.8;
+  color: #444;
 }
 .course-list, .projects ul {
   margin: 10px 0;
@@ -344,10 +352,10 @@ html {
   .pdf-preview {
     padding-bottom: 150%; /* Ensures full visibility on mobile */
   }
-  .skill-grid {
-    grid-template-columns: 1fr;
-  }
-  .skill-item {
+  .skill-category {
     padding: 15px;
+  }
+  .skill-category h3 {
+    font-size: 1rem;
   }
 }
