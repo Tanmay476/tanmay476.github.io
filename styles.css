@@ -170,18 +170,14 @@ header .tagline {
 .project-links i {
   margin-right: 5px;
 }
-.resume-content {
+.resume-content, .projects-content {
   display: flex;
   gap: 30px;
   flex-direction: row-reverse;
 }
-.projects-content {
-  display: flex;
-  gap: 30px;
-  flex-direction: row;
-}
 .resume-main, .projects {
   flex: 3;
+  min-width: 0;
 }
 .pdf-preview {
   width: 100%;
@@ -215,6 +211,8 @@ header .tagline {
 }
 .sidebar {
   flex: 1;
+  min-width: 250px;
+  max-width: 300px;
   background: #ffffff;
   padding: 25px;
   border-radius: 15px;
