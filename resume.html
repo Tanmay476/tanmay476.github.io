@@ -4,47 +4,120 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tanmay Shukla - Resume</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/resume.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+  <!-- Navigation -->
   <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="resume.html" class="active">Resume</a></li>
-      <li><a href="projects.html">Projects</a></li>
-    </ul>
-  </nav>
-  <div class="container">
-    <div class="resume-content">
-      <aside class="sidebar">
-        <img src="assets/profile-photo.jpg" alt="Tanmay Shukla" class="profile-photo">
-        <div class="contact-links">
-          <p><a href="mailto:tshukla31@gatech.edu" target="_blank"><i class="fas fa-envelope"></i> tshukla31@gatech.edu</a></p>
-          <p><a href="https://www.linkedin.com/in/tanmay-shukla-8a9153310" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
-          <p><a href="https://github.com/tanmay476" target="_blank"><i class="fab fa-github"></i> GitHub</a></p>
-        </div>
-      </aside>
-      <section class="resume-main card fade-in">
-        <h2>Resume</h2>
-        <h3>Resume Preview</h3>
-        <div class="pdf-preview">
-          <embed src="assets/TanmayShuklaResume.pdf#page=1" type="application/pdf">
-        </div>
-        <p class="download-link"><a href="assets/TanmayShuklaResume.pdf" download>Download Full Resume (PDF) <i class="fas fa-download"></i></a></p>
-        <h3>Relevant Coursework</h3>
-        <ul class="course-list">
-          <li>ECE 2020: Digital Systems Design : A</li>
-          <li>ECE 2031: Digital Design Laboratory: A</li>
-          <li>ECE 2035: Programming for Hardware/Software Systems: A</li>
-          <li>ECE 2040: Circuit Analysis: In Progress</li>
-        </ul>
-      </section>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">TS</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html" class="active">Resume</a></li>
+      </ul>
     </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="resume-header">
+    <div class="container">
+      <h1>Resume</h1>
+      <p>My academic journey and professional experience</p>
+    </div>
+  </header>
+
+  <!-- Resume Container -->
+  <div class="container resume-container">
+    <!-- Main Content -->
+    <main class="resume-main fade-in-up">
+      <!-- Resume PDF Section -->
+      <section class="resume-section">
+        <h2>Resume Preview</h2>
+        <div class="pdf-viewer">
+          <embed src="assets/TanmayShuklaResume.pdf#page=1" type="application/pdf" class="pdf-embed">
+        </div>
+        <a href="assets/TanmayShuklaResume.pdf" download class="download-button">
+          <i class="fas fa-download"></i>
+          Download Full Resume (PDF)
+        </a>
+      </section>
+
+      <!-- Relevant Coursework -->
+      <section class="resume-section">
+        <h2>Relevant Coursework</h2>
+        <div class="coursework-grid">
+          <div class="course-item">
+            <span class="course-name">ECE 2020: Digital Systems Design</span>
+            <span class="course-grade">Grade: A</span>
+          </div>
+          <div class="course-item">
+            <span class="course-name">ECE 2031: Digital Design Laboratory</span>
+            <span class="course-grade">Grade: A</span>
+          </div>
+          <div class="course-item">
+            <span class="course-name">ECE 2035: Programming for Hardware/Software Systems</span>
+            <span class="course-grade">Grade: A</span>
+          </div>
+          <div class="course-item">
+            <span class="course-name">ECE 2040: Circuit Analysis</span>
+            <span class="course-grade">In Progress</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="resume-sidebar">
+      <!-- Contact Card -->
+      <div class="sidebar-card fade-in-up" style="animation-delay: 0.1s;">
+        <img src="assets/profile-photo.jpg" alt="Tanmay Shukla" class="sidebar-image">
+        <h3>Tanmay Shukla</h3>
+        <p>Computer Engineering Student<br>Georgia Institute of Technology</p>
+
+        <div class="sidebar-links">
+          <a href="mailto:tshukla31@gatech.edu" class="sidebar-link" target="_blank">
+            <i class="fas fa-envelope"></i>
+            Email Me
+          </a>
+          <a href="https://www.linkedin.com/in/tanmay-shukla-8a9153310" class="sidebar-link" target="_blank">
+            <i class="fab fa-linkedin"></i>
+            LinkedIn
+          </a>
+          <a href="https://github.com/tanmay476" class="sidebar-link" target="_blank">
+            <i class="fab fa-github"></i>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Stats Card -->
+      <div class="stats-card fade-in-up" style="animation-delay: 0.2s;">
+        <div class="stat-item">
+          <span class="stat-number">4.0</span>
+          <span class="stat-label">GPA</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">6+</span>
+          <span class="stat-label">Projects Completed</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Research Groups</span>
+        </div>
+      </div>
+    </aside>
   </div>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Tanmay Shukla. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 Tanmay Shukla. All rights reserved.</p>
+    </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
