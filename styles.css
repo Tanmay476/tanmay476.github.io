@@ -118,15 +118,17 @@ header .tagline {
   margin-bottom: 8px;
 }
 .project {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding: 20px;
   border-left: 5px solid #2a6b9b;
   border-radius: 10px;
   background: #f9f9f9;
   transition: background 0.3s ease;
+  box-shadow: none;
 }
 .project:hover {
   background: #f0f4f8;
+  transform: none;
 }
 .project h3 {
   margin-top: 0;
