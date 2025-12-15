@@ -81,15 +81,28 @@
   transform: translateY(-3px);
 }
 
-/* ==================== ABOUT SECTION ==================== */
-.about-section {
+/* ==================== ABOUT & SKILLS COMBINED SECTION ==================== */
+.about-skills-section {
   padding: 5rem 0;
   background: white;
 }
 
+.about-skills-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.about-content h3,
+.skills-content h3 {
+  color: var(--primary-color);
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
 .about-content {
-  max-width: 900px;
-  margin: 0 auto;
+  padding-right: 1.5rem;
 }
 
 .section-title {
@@ -163,52 +176,49 @@
   font-size: 1.25rem;
 }
 
-/* ==================== SKILLS SECTION ==================== */
-.skills-section {
-  padding: 5rem 0;
+/* ==================== SKILLS CONTENT ==================== */
+.skills-content {
+  padding-left: 1.5rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill-item {
   background: var(--background-light);
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.skill-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: var(--shadow-md);
-  transition: var(--transition);
+  padding: 1.5rem;
+  border-radius: 12px;
   border-left: 4px solid var(--secondary-color);
+  transition: var(--transition);
 }
 
-.skill-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+.skill-item:hover {
+  transform: translateX(5px);
   border-left-color: var(--accent-color);
+  box-shadow: var(--shadow-md);
 }
 
-.skill-card h3 {
+.skill-item h4 {
   color: var(--primary-color);
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
 
-.skill-card h3 i {
+.skill-item h4 i {
   color: var(--secondary-color);
-  font-size: 1.75rem;
+  font-size: 1.25rem;
 }
 
-.skill-card p {
+.skill-item p {
   color: var(--text-light);
-  line-height: 1.8;
-  font-size: 0.95rem;
+  line-height: 1.7;
+  font-size: 0.9rem;
 }
 
 /* ==================== CTA SECTION ==================== */
@@ -281,8 +291,15 @@
     height: 140px;
   }
 
-  .skills-grid {
+  .about-skills-wrapper {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-content,
+  .skills-content {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .section-title {
