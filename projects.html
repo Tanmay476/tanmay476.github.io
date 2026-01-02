@@ -44,7 +44,7 @@
             <span class="skill-tag">Intel Quartus</span>
           </div>
           <p class="project-description">
-            Designed a memory-mapped four-channel PWM servo controller as a custom FPGA peripheral in VHDL using Intel Quartus Prime. Implemented precise servo control with 7-bit position resolution (128 positions, 1.4° angular resolution) and sub-microsecond timing accuracy achieved through a PLL-derived 71 kHz clock. The architecture features a double-buffered register interface for glitch-free position updates, ensuring smooth servo transitions. The peripheral integrates seamlessly with the Nios II soft processor through an Avalon memory-mapped interface, demonstrating practical SoC integration and hardware-software co-design principles.
+            Built a hardware PWM controller in VHDL that lets a soft-core processor drive four hobby servos with 1.4° resolution and 0 timing jitter with fully autonomous operation on a DE10-Lite FPGA.
           </p>
           <div class="project-links">
             <a href="https://github.com/Tanmay476/Servo-Peripheral-designed-in-VHDL" target="_blank" class="project-link">
@@ -66,9 +66,9 @@
             <span class="skill-tag">Verdi</span>
           </div>
           <p class="project-description">
-            Designed and verified a fully functional 64-bit calculator system with FSM-based controller, dual-port SRAM interface (Sky130 macro), pipelined result buffering, and 32-bit ripple-carry adder datapath. Completed full RTL-to-GDSII flow in Cadence Innovus including floorplanning, placement, CTS, and routing.
+            Designed a 64-bit calculator in SystemVerilog RTL with FSM-based control, synchronous resets, and a dual-bank SRAM interface for storing inputs and outputs.
             <br><br>
-            Developed comprehensive UVM-style verification environment in SystemVerilog with randomized constrained testing, functional coverage, and assertion-based verification across 200+ test scenarios to ensure design correctness.
+            Developed comprehensive UVM-style verification environment with driver/monitor/scoreboard components to achieve 99% code coverage. Completed synthesis, floorplanning, placement, and routing in Cadence Innovus using TCL to produce a full physical design layout (VLSI).
           </p>
           <div class="project-links">
             <a href="https://github.com/tanmay476/64_Bit_Calculator_Verification" target="_blank" class="project-link">
@@ -78,8 +78,26 @@
         </div>
       </div>
 
-      <!-- ADCS Board -->
+      <!-- Pipelined Ethernet Packet Processor -->
       <div class="project-card fade-in-up" style="animation-delay: 0.2s;">
+        <div class="project-content">
+          <h3 class="project-title">Pipelined Ethernet/IPv4/UDP Packet Processor</h3>
+          <div class="project-skills">
+            <span class="skill-tag">SystemVerilog</span>
+            <span class="skill-tag">FPGA</span>
+            <span class="skill-tag">AXI-Stream</span>
+            <span class="skill-tag">Network Protocols</span>
+          </div>
+          <p class="project-description">
+            Built a hardware-based system in SystemVerilog to parse and validate network packets (Ethernet/IPv4/UDP) at 125 MHz with 1-packet-per-cycle throughput using AXI-Stream interfaces on FPGA.
+            <br><br>
+            Implemented IPv4 and UDP checksum validation, metadata extraction (MAC addresses, IP addresses, ports), and error detection for malformed packets.
+          </p>
+        </div>
+      </div>
+
+      <!-- ADCS Board -->
+      <div class="project-card fade-in-up" style="animation-delay: 0.3s;">
         <div class="project-content">
           <h3 class="project-title">ADCS Flight Computer for Georgia Tech Rocketry</h3>
           <div class="project-skills">
@@ -98,7 +116,7 @@
       </div>
 
       <!-- Mbed Game -->
-      <div class="project-card fade-in-up" style="animation-delay: 0.3s;">
+      <div class="project-card fade-in-up" style="animation-delay: 0.4s;">
         <div class="project-content">
           <h3 class="project-title">Mbed-Based Interactive Game</h3>
           <div class="project-skills">
@@ -119,7 +137,7 @@
       </div>
 
       <!-- Graphene Supercapacitors -->
-      <div class="project-card fade-in-up" style="animation-delay: 0.4s;">
+      <div class="project-card fade-in-up" style="animation-delay: 0.5s;">
         <div class="project-content">
           <h3 class="project-title">Graphene Supercapacitors Research</h3>
           <div class="project-skills">
@@ -135,7 +153,7 @@
       </div>
 
       <!-- PID Robot -->
-      <div class="project-card fade-in-up" style="animation-delay: 0.5s;">
+      <div class="project-card fade-in-up" style="animation-delay: 0.6s;">
         <div class="project-content">
           <h3 class="project-title">PID Line-Following & Bluetooth Robot</h3>
           <div class="project-skills">
