@@ -25,51 +25,138 @@
   <header class="projects-header">
     <div class="container">
       <h1>My Projects</h1>
-      <p>A collection of my hardware design, verification, and embedded systems projects</p>
+      <p>Hardware design, verification, and embedded systems work from coursework, research, and personal initiatives</p>
     </div>
   </header>
 
   <!-- Projects Container -->
   <div class="container projects-container">
-    <div class="projects-grid">
 
-      <!-- Servo Peripheral Controller -->
-      <div class="project-card fade-in-up">
-        <div class="project-content">
-          <h3 class="project-title">Servo Peripheral Controller in VHDL</h3>
+    <!-- Category Filters -->
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="all">
+        <i class="fas fa-th-large"></i> All Projects
+      </button>
+      <button class="filter-btn" data-filter="hardware">
+        <i class="fas fa-microchip"></i> Hardware Design
+      </button>
+      <button class="filter-btn" data-filter="embedded">
+        <i class="fas fa-cogs"></i> Embedded Systems
+      </button>
+      <button class="filter-btn" data-filter="vlsi">
+        <i class="fas fa-layer-group"></i> VLSI
+      </button>
+      <button class="filter-btn" data-filter="research">
+        <i class="fas fa-flask"></i> Research
+      </button>
+    </div>
+
+    <!-- Featured Project: ADCS -->
+    <div class="featured-project fade-in-up" data-category="embedded hardware">
+      <span class="featured-badge"><i class="fas fa-star"></i> Featured Project</span>
+      <div class="featured-content">
+        <div class="featured-info">
+          <h2>ADCS Flight Computer for Georgia Tech Rocketry</h2>
+          <p class="featured-subtitle">Attitude Determination & Control Systems for the First Collegiate Two-Stage Rocket to the Karman Line</p>
+
           <div class="project-skills">
-            <span class="skill-tag">VHDL</span>
-            <span class="skill-tag">FPGA</span>
-            <span class="skill-tag">PWM</span>
-            <span class="skill-tag">Intel Quartus</span>
+            <span class="skill-tag">Altium Designer</span>
+            <span class="skill-tag">PCB Design</span>
+            <span class="skill-tag">Embedded C</span>
+            <span class="skill-tag">Extended Kalman Filter</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">PC104 Stack</span>
           </div>
-          <p class="project-description">
-            Built a hardware PWM controller in VHDL that lets a soft-core processor drive four hobby servos with 1.4° resolution and 0 timing jitter with fully autonomous operation on a DE10-Lite FPGA.
+
+          <div class="feature-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-rocket"></i>
+              <div>
+                <strong>100km Target Altitude</strong>
+                <span>Karman line - edge of space</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-microchip"></i>
+              <div>
+                <strong>Custom PC104 Architecture</strong>
+                <span>Flight-grade embedded system</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-code"></i>
+              <div>
+                <strong>1000+ Lines of Embedded C</strong>
+                <span>EKF algorithms for state estimation</span>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            As Avionics Hardware Lead, I designed and routed the ADCS flight computer PCB from scratch in Altium, integrating high-speed IMU sensors, barometers, GPS modules, robust power distribution with multiple voltage rails, and telemetry systems for real-time data transmission to ground stations.
           </p>
-          <div class="project-links">
-            <a href="https://github.com/Tanmay476/Servo-Peripheral-designed-in-VHDL" target="_blank" class="project-link">
-              <i class="fab fa-github"></i> View Code
-            </a>
-          </div>
+          <p>
+            Co-developed the embedded software implementing extended Kalman Filter algorithms for real-time 6-DOF state estimation and flight control, enabling precise attitude determination during supersonic flight phases.
+          </p>
+        </div>
+        <div class="featured-images">
+          <img src="assets/ADCS.jpg" alt="ADCS Board - Top View" class="project-image-full">
+          <img src="assets/ADCS2.jpg" alt="ADCS Board - Perspective" class="project-image-full">
         </div>
       </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <h2 class="section-divider"><span>All Projects</span></h2>
+
+    <div class="projects-grid">
 
       <!-- 64-Bit Calculator Verification -->
-      <div class="project-card fade-in-up" style="animation-delay: 0.1s;">
+      <div class="project-card fade-in-up" data-category="vlsi hardware">
+        <div class="project-header">
+          <span class="project-type"><i class="fas fa-layer-group"></i> VLSI & Verification</span>
+        </div>
         <div class="project-content">
           <h3 class="project-title">64-Bit Calculator RTL Design & VLSI Implementation</h3>
           <div class="project-skills">
             <span class="skill-tag">SystemVerilog</span>
-            <span class="skill-tag">VLSI</span>
+            <span class="skill-tag">UVM</span>
             <span class="skill-tag">Cadence Innovus</span>
-            <span class="skill-tag">Physical Design</span>
             <span class="skill-tag">Verdi</span>
+            <span class="skill-tag">TCL</span>
           </div>
+
           <p class="project-description">
-            Designed a 64-bit calculator in SystemVerilog RTL with FSM-based control, synchronous resets, and a dual-bank SRAM interface for storing inputs and outputs.
-            <br><br>
-            Developed comprehensive UVM-style verification environment with driver/monitor/scoreboard components to achieve 99% code coverage. Completed synthesis, floorplanning, placement, and routing in Cadence Innovus using TCL to produce a full physical design layout (VLSI).
+            Full-stack digital design from RTL specification through physical implementation, demonstrating complete ASIC design flow competency.
           </p>
+
+          <div class="project-details">
+            <div class="detail-section">
+              <h4><i class="fas fa-pencil-ruler"></i> RTL Design</h4>
+              <ul>
+                <li>FSM-based control with synchronous resets</li>
+                <li>Dual-bank SRAM interface for I/O</li>
+                <li>64-bit arithmetic operations</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-check-double"></i> Verification</h4>
+              <ul>
+                <li>UVM testbench with driver/monitor/scoreboard</li>
+                <li>Achieved 99% code coverage</li>
+                <li>Constrained random stimulus generation</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-drafting-compass"></i> Physical Design</h4>
+              <ul>
+                <li>Synthesis, floorplanning, P&R in Innovus</li>
+                <li>TCL-scripted automation</li>
+                <li>Full GDSII layout generation</li>
+              </ul>
+            </div>
+          </div>
+
           <div class="project-links">
             <a href="https://github.com/tanmay476/64_Bit_Calculator_Verification" target="_blank" class="project-link">
               <i class="fab fa-github"></i> View Code
@@ -79,7 +166,10 @@
       </div>
 
       <!-- Pipelined Ethernet Packet Processor -->
-      <div class="project-card fade-in-up" style="animation-delay: 0.2s;">
+      <div class="project-card fade-in-up" data-category="hardware">
+        <div class="project-header">
+          <span class="project-type"><i class="fas fa-network-wired"></i> Digital Design</span>
+        </div>
         <div class="project-content">
           <h3 class="project-title">Pipelined Ethernet/IPv4/UDP Packet Processor</h3>
           <div class="project-skills">
@@ -88,46 +178,119 @@
             <span class="skill-tag">AXI-Stream</span>
             <span class="skill-tag">Network Protocols</span>
           </div>
+
           <p class="project-description">
-            Built a hardware-based system in SystemVerilog to parse and validate network packets (Ethernet/IPv4/UDP) at 125 MHz with 1-packet-per-cycle throughput using AXI-Stream interfaces on FPGA.
-            <br><br>
-            Implemented IPv4 and UDP checksum validation, metadata extraction (MAC addresses, IP addresses, ports), and error detection for malformed packets.
+            High-throughput hardware packet parser achieving wire-speed processing for network applications.
           </p>
+
+          <div class="project-details">
+            <div class="detail-section">
+              <h4><i class="fas fa-tachometer-alt"></i> Performance</h4>
+              <ul>
+                <li>125 MHz operation frequency</li>
+                <li>1 packet per cycle throughput</li>
+                <li>AXI-Stream compliant interfaces</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-shield-alt"></i> Features</h4>
+              <ul>
+                <li>IPv4 & UDP checksum validation</li>
+                <li>MAC/IP/port metadata extraction</li>
+                <li>Malformed packet detection</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- ADCS Board -->
-      <div class="project-card fade-in-up" style="animation-delay: 0.3s;">
+      <!-- Servo Peripheral Controller -->
+      <div class="project-card fade-in-up" data-category="hardware embedded">
+        <div class="project-header">
+          <span class="project-type"><i class="fas fa-microchip"></i> FPGA Design</span>
+        </div>
         <div class="project-content">
-          <h3 class="project-title">ADCS Flight Computer for Georgia Tech Rocketry</h3>
+          <h3 class="project-title">Servo Peripheral Controller in VHDL</h3>
           <div class="project-skills">
-            <span class="skill-tag">Altium</span>
-            <span class="skill-tag">PCB Design</span>
-            <span class="skill-tag">Embedded C</span>
-            <span class="skill-tag">Kalman Filter</span>
+            <span class="skill-tag">VHDL</span>
+            <span class="skill-tag">FPGA</span>
+            <span class="skill-tag">PWM</span>
+            <span class="skill-tag">Intel Quartus</span>
+            <span class="skill-tag">DE10-Lite</span>
           </div>
+
           <p class="project-description">
-            Designed and routed the Attitude Determination and Control Systems board for the first collegiate two-stage rocket targeting the Kármán line. Features advanced sensors, robust data logging, and streamlined layout for precise attitude determination and reliable in-flight telemetry. Serves as the brain of the rocket with extended Kalman Filter for state estimation.
+            Hardware PWM controller enabling precise servo motor control from a soft-core processor with zero timing jitter.
           </p>
-          <div class="project-images">
-            <img src="assets/ADCS.jpg" alt="ADCS Board" class="project-image-full">
+
+          <div class="project-details">
+            <div class="detail-section">
+              <h4><i class="fas fa-bullseye"></i> Specifications</h4>
+              <ul>
+                <li>4-channel simultaneous servo control</li>
+                <li>1.4° angular resolution</li>
+                <li>Zero timing jitter operation</li>
+                <li>Fully autonomous hardware control</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/Tanmay476/Servo-Peripheral-designed-in-VHDL" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View Code
+            </a>
           </div>
         </div>
       </div>
 
-      <!-- Mbed Game -->
-      <div class="project-card fade-in-up" style="animation-delay: 0.4s;">
+      <!-- Mbed Game - Enhanced -->
+      <div class="project-card fade-in-up" data-category="embedded">
+        <div class="project-header">
+          <span class="project-type"><i class="fas fa-gamepad"></i> Embedded Systems</span>
+        </div>
         <div class="project-content">
-          <h3 class="project-title">Mbed-Based Interactive Game</h3>
+          <h3 class="project-title">Missile Blaster - Mbed Arcade Game</h3>
           <div class="project-skills">
             <span class="skill-tag">C/C++</span>
-            <span class="skill-tag">Mbed OS</span>
-            <span class="skill-tag">ARM</span>
-            <span class="skill-tag">Embedded</span>
+            <span class="skill-tag">ARM Mbed LPC1768</span>
+            <span class="skill-tag">uLCD Display</span>
+            <span class="skill-tag">Real-time Systems</span>
           </div>
+
           <p class="project-description">
-            Developed an embedded arcade-style shooter on the ARM Mbed microcontroller platform in C/C++, interfacing with a color LCD for graphics, input controls, and audio peripherals. Implemented missile physics, collision detection, and score tracking optimized for a low-resource microcontroller environment.
+            Classic Missile Command-inspired arcade game built for resource-constrained ARM microcontroller, demonstrating real-time embedded programming and hardware interfacing skills.
           </p>
+
+          <div class="project-details">
+            <div class="detail-section">
+              <h4><i class="fas fa-crosshairs"></i> Gameplay</h4>
+              <ul>
+                <li>Defend cities from incoming missiles</li>
+                <li>Real-time turret control & firing</li>
+                <li>Progressive difficulty scaling</li>
+                <li>Score tracking & game states</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-plug"></i> Hardware Integration</h4>
+              <ul>
+                <li>128x128 color LCD graphics</li>
+                <li>5-way navigation switch input</li>
+                <li>Speaker audio effects</li>
+                <li>Optional accelerometer controls</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-code"></i> Software Architecture</h4>
+              <ul>
+                <li>Modular component design</li>
+                <li>Custom linked list for entities</li>
+                <li>Collision detection algorithms</li>
+                <li>Memory-optimized for MCU</li>
+              </ul>
+            </div>
+          </div>
+
           <div class="project-links">
             <a href="https://github.com/tanmay476/Mbed-Missile-Blaster-Game-in-C" target="_blank" class="project-link">
               <i class="fab fa-github"></i> View Code
@@ -137,36 +300,86 @@
       </div>
 
       <!-- Graphene Supercapacitors -->
-      <div class="project-card fade-in-up" style="animation-delay: 0.5s;">
+      <div class="project-card fade-in-up" data-category="research">
+        <div class="project-header">
+          <span class="project-type"><i class="fas fa-flask"></i> Research</span>
+          <span class="award-badge"><i class="fas fa-trophy"></i> 1st Place National</span>
+        </div>
         <div class="project-content">
           <h3 class="project-title">Graphene Supercapacitors Research</h3>
           <div class="project-skills">
-            <span class="skill-tag">Research</span>
             <span class="skill-tag">Nanomaterials</span>
-            <span class="skill-tag">Chemistry</span>
-            <span class="skill-tag">Circuit Design</span>
+            <span class="skill-tag">Electrochemistry</span>
+            <span class="skill-tag">Energy Storage</span>
+            <span class="skill-tag">Data Analysis</span>
           </div>
+
           <p class="project-description">
-            Independent research on graphene supercapacitors to compare their efficiency with traditional EDLCs. The prototype demonstrated a 40% higher energy density under identical parameters. Won 1st place at a national science fair competing against over 3,000 students and 20+ schools. Showcased at the Oman American Business Center's Environmental Science Fair.
+            Independent research investigating graphene-based supercapacitors as high-performance alternatives to traditional electric double-layer capacitors (EDLCs).
           </p>
+
+          <div class="project-details">
+            <div class="detail-section">
+              <h4><i class="fas fa-chart-line"></i> Results</h4>
+              <ul>
+                <li>40% higher energy density vs traditional EDLCs</li>
+                <li>Comparable power density maintained</li>
+                <li>Improved charge/discharge cycles</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-award"></i> Recognition</h4>
+              <ul>
+                <li>1st place - National Science Fair</li>
+                <li>Competed against 3,000+ students</li>
+                <li>Featured at Oman American Business Center</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- PID Robot -->
-      <div class="project-card fade-in-up" style="animation-delay: 0.6s;">
+      <div class="project-card fade-in-up" data-category="embedded">
+        <div class="project-header">
+          <span class="project-type"><i class="fas fa-robot"></i> Robotics</span>
+          <span class="award-badge"><i class="fas fa-trophy"></i> 1st Place</span>
+        </div>
         <div class="project-content">
           <h3 class="project-title">PID Line-Following & Bluetooth Robot</h3>
           <div class="project-skills">
             <span class="skill-tag">Arduino</span>
             <span class="skill-tag">PID Control</span>
-            <span class="skill-tag">Bluetooth</span>
-            <span class="skill-tag">CAD</span>
+            <span class="skill-tag">Bluetooth HC05</span>
+            <span class="skill-tag">SolidWorks</span>
           </div>
+
           <p class="project-description">
-            Won first place at a robotics competition at Modern College out of 500+ students in schools & universities across Oman. Designed the robot chassis using CAD and used IR sensors for line-following and an HC05 module to control the robot using a PS5 Controller through Bluetooth.
+            Competition-winning robot featuring dual control modes: autonomous PID-based line following and manual Bluetooth control via PS5 controller.
           </p>
+
+          <div class="project-details">
+            <div class="detail-section">
+              <h4><i class="fas fa-sliders-h"></i> Control Systems</h4>
+              <ul>
+                <li>Tuned PID controller for smooth tracking</li>
+                <li>IR sensor array for line detection</li>
+                <li>Bluetooth serial communication</li>
+                <li>PS5 controller integration</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-trophy"></i> Competition</h4>
+              <ul>
+                <li>1st place at Modern College</li>
+                <li>500+ student competitors</li>
+                <li>Schools & universities across Oman</li>
+              </ul>
+            </div>
+          </div>
+
           <div class="project-images">
-            <img src="assets/Robot.jpg" alt="Robot Full View" class="project-image-full">
+            <img src="assets/Robot.jpg" alt="PID Robot" class="project-image-full">
           </div>
         </div>
       </div>
@@ -182,5 +395,37 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Project filtering functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card, .featured-project');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Update active button
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+
+          const filter = this.dataset.filter;
+
+          projectCards.forEach(card => {
+            if (filter === 'all') {
+              card.style.display = '';
+              card.style.animation = 'fadeInUp 0.5s ease-out forwards';
+            } else {
+              const categories = card.dataset.category || '';
+              if (categories.includes(filter)) {
+                card.style.display = '';
+                card.style.animation = 'fadeInUp 0.5s ease-out forwards';
+              } else {
+                card.style.display = 'none';
+              }
+            }
+          });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
