@@ -51,57 +51,63 @@
       </button>
     </div>
 
-    <!-- Featured Project: ADCS -->
-    <div class="featured-project fade-in-up" data-category="embedded hardware">
+    <!-- Featured Project: 64-Bit Calculator VLSI -->
+    <div class="featured-project fade-in-up" data-category="vlsi hardware">
       <span class="featured-badge"><i class="fas fa-star"></i> Featured Project</span>
       <div class="featured-content">
         <div class="featured-info">
-          <h2>ADCS Flight Computer for Georgia Tech Rocketry</h2>
-          <p class="featured-subtitle">Attitude Determination & Control Systems for the First Collegiate Two-Stage Rocket to the Karman Line</p>
+          <h2>64-Bit Calculator RTL Design & VLSI Implementation</h2>
+          <p class="featured-subtitle">Complete ASIC design flow from SystemVerilog RTL through physical implementation in Cadence Innovus, with comprehensive UVM-style verification achieving 99% code coverage.</p>
 
           <div class="project-skills">
-            <span class="skill-tag">Altium Designer</span>
-            <span class="skill-tag">PCB Design</span>
-            <span class="skill-tag">Embedded C</span>
-            <span class="skill-tag">Extended Kalman Filter</span>
-            <span class="skill-tag">Linux</span>
-            <span class="skill-tag">PC104 Stack</span>
+            <span class="skill-tag">SystemVerilog</span>
+            <span class="skill-tag">UVM Verification</span>
+            <span class="skill-tag">Cadence Innovus</span>
+            <span class="skill-tag">Synopsys VCS</span>
+            <span class="skill-tag">Verdi</span>
+            <span class="skill-tag">TCL</span>
+            <span class="skill-tag">Sky130 PDK</span>
           </div>
 
           <div class="feature-highlights">
             <div class="highlight-item">
-              <i class="fas fa-rocket"></i>
+              <i class="fas fa-layer-group"></i>
               <div>
-                <strong>100km Target Altitude</strong>
-                <span>Karman line - edge of space</span>
+                <strong>Full ASIC Flow</strong>
+                <span>RTL to GDSII layout</span>
               </div>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-microchip"></i>
+              <i class="fas fa-check-double"></i>
               <div>
-                <strong>Custom PC104 Architecture</strong>
-                <span>Flight-grade embedded system</span>
+                <strong>99% Code Coverage</strong>
+                <span>UVM testbench verification</span>
               </div>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-code"></i>
+              <i class="fas fa-memory"></i>
               <div>
-                <strong>1000+ Lines of Embedded C</strong>
-                <span>EKF algorithms for state estimation</span>
+                <strong>Dual-Port SRAM</strong>
+                <span>Sky130 macro integration</span>
               </div>
             </div>
           </div>
 
           <p>
-            As Avionics Hardware Lead, I designed and routed the ADCS flight computer PCB from scratch in Altium, integrating high-speed IMU sensors, barometers, GPS modules, robust power distribution with multiple voltage rails, and telemetry systems for real-time data transmission to ground stations.
+            Designed a memory-based 64-bit calculator with FSM-based controller managing read, add, and write operations across dual 32-bit Sky130 SRAM blocks. The architecture features a 32-bit ripple-carry adder and result buffering for pipelined operation.
           </p>
           <p>
-            Co-developed the embedded software implementing extended Kalman Filter algorithms for real-time 6-DOF state estimation and flight control, enabling precise attitude determination during supersonic flight phases.
+            Built a comprehensive UVM-style verification environment with driver, monitor, sequencer, and scoreboard components. Includes SystemVerilog Assertions for protocol checking, directed test cases for edge conditions, and 200+ randomized transactions.
           </p>
+
+          <div class="project-links" style="border-top: none; padding-top: 0.5rem;">
+            <a href="https://github.com/tanmay476/64_Bit_Calculator_Verification" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
         </div>
         <div class="featured-images">
-          <img src="assets/ADCS.jpg" alt="ADCS Board - Top View" class="project-image-full">
-          <img src="assets/ADCS2.jpg" alt="ADCS Board - Perspective" class="project-image-full">
+          <img src="assets/calculator-vlsi.png" alt="64-Bit Calculator VLSI Layout in Cadence Innovus" class="project-image-full">
         </div>
       </div>
     </div>
@@ -111,56 +117,47 @@
 
     <div class="projects-grid">
 
-      <!-- 64-Bit Calculator Verification -->
-      <div class="project-card fade-in-up" data-category="vlsi hardware">
+      <!-- ADCS Flight Computer -->
+      <div class="project-card fade-in-up" data-category="embedded hardware">
         <div class="project-header">
-          <span class="project-type"><i class="fas fa-layer-group"></i> VLSI & Verification</span>
+          <span class="project-type"><i class="fas fa-rocket"></i> Aerospace & PCB</span>
         </div>
         <div class="project-content">
-          <h3 class="project-title">64-Bit Calculator RTL Design & VLSI Implementation</h3>
+          <h3 class="project-title">ADCS Flight Computer for Georgia Tech Rocketry</h3>
           <div class="project-skills">
-            <span class="skill-tag">SystemVerilog</span>
-            <span class="skill-tag">UVM</span>
-            <span class="skill-tag">Cadence Innovus</span>
-            <span class="skill-tag">Verdi</span>
-            <span class="skill-tag">TCL</span>
+            <span class="skill-tag">Altium Designer</span>
+            <span class="skill-tag">PCB Design</span>
+            <span class="skill-tag">Embedded C</span>
+            <span class="skill-tag">Kalman Filter</span>
+            <span class="skill-tag">PC104</span>
           </div>
 
           <p class="project-description">
-            Full-stack digital design from RTL specification through physical implementation, demonstrating complete ASIC design flow competency.
+            Attitude Determination & Control Systems board for the first collegiate two-stage rocket targeting the Karman line (100km altitude).
           </p>
 
           <div class="project-details">
             <div class="detail-section">
-              <h4><i class="fas fa-pencil-ruler"></i> RTL Design</h4>
+              <h4><i class="fas fa-drafting-compass"></i> Hardware Design</h4>
               <ul>
-                <li>FSM-based control with synchronous resets</li>
-                <li>Dual-bank SRAM interface for I/O</li>
-                <li>64-bit arithmetic operations</li>
+                <li>Custom PC104 stack architecture</li>
+                <li>High-speed IMU, barometer, GPS integration</li>
+                <li>Multi-rail power distribution</li>
+                <li>Real-time telemetry system</li>
               </ul>
             </div>
             <div class="detail-section">
-              <h4><i class="fas fa-check-double"></i> Verification</h4>
+              <h4><i class="fas fa-code"></i> Embedded Software</h4>
               <ul>
-                <li>UVM testbench with driver/monitor/scoreboard</li>
-                <li>Achieved 99% code coverage</li>
-                <li>Constrained random stimulus generation</li>
-              </ul>
-            </div>
-            <div class="detail-section">
-              <h4><i class="fas fa-drafting-compass"></i> Physical Design</h4>
-              <ul>
-                <li>Synthesis, floorplanning, P&R in Innovus</li>
-                <li>TCL-scripted automation</li>
-                <li>Full GDSII layout generation</li>
+                <li>1000+ lines of embedded C & Linux</li>
+                <li>Extended Kalman Filter for 6-DOF state estimation</li>
+                <li>Flight control algorithms</li>
               </ul>
             </div>
           </div>
 
-          <div class="project-links">
-            <a href="https://github.com/tanmay476/64_Bit_Calculator_Verification" target="_blank" class="project-link">
-              <i class="fab fa-github"></i> View Code
-            </a>
+          <div class="project-images">
+            <img src="assets/ADCS.jpg" alt="ADCS Board" class="project-image-full">
           </div>
         </div>
       </div>
@@ -201,6 +198,12 @@
               </ul>
             </div>
           </div>
+
+          <div class="project-links">
+            <a href="https://github.com/Tanmay476/eth-ipv4-udp-pipeline" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
         </div>
       </div>
 
@@ -217,20 +220,30 @@
             <span class="skill-tag">PWM</span>
             <span class="skill-tag">Intel Quartus</span>
             <span class="skill-tag">DE10-Lite</span>
+            <span class="skill-tag">SCOMP CPU</span>
           </div>
 
           <p class="project-description">
-            Hardware PWM controller enabling precise servo motor control from a soft-core processor with zero timing jitter.
+            Custom memory-mapped FPGA peripheral integrated with the SCOMP 16-bit soft-core processor, generating precise PWM signals for RC servo control with hardware-guaranteed timing.
           </p>
 
           <div class="project-details">
             <div class="detail-section">
-              <h4><i class="fas fa-bullseye"></i> Specifications</h4>
+              <h4><i class="fas fa-bullseye"></i> Hardware Specs</h4>
               <ul>
-                <li>4-channel simultaneous servo control</li>
-                <li>1.4° angular resolution</li>
-                <li>Zero timing jitter operation</li>
-                <li>Fully autonomous hardware control</li>
+                <li>4 independent servo channels (50 Hz PWM)</li>
+                <li>7-bit position control (128 positions, ~1.4° resolution)</li>
+                <li>PLL-derived 71 kHz clock for sub-microsecond accuracy</li>
+                <li>Double-buffered updates for glitch-free operation</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-cogs"></i> Architecture</h4>
+              <ul>
+                <li>Memory-mapped I/O interface (addresses 0x50-0x53)</li>
+                <li>HSPG module with FSM-based pulse generation</li>
+                <li>Cross-clock domain synchronization</li>
+                <li>Only 5% logic element utilization on MAX 10</li>
               </ul>
             </div>
           </div>
