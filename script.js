@@ -45,24 +45,36 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Animate elements on scroll
+  // Enhanced scroll reveal animations
   const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: '0px 0px -80px 0px'
   };
 
   const observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
         observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  // Observe all cards and fade-in elements
-  document.querySelectorAll('.card, .fade-in, .fade-in-up, .slide-in-left').forEach(el => {
+  // Observe all cards and fade-in elements with staggered delay
+  const animatedElements = document.querySelectorAll('.card, .fade-in, .fade-in-up, .slide-in-left, .project-card, .featured-project, .filter-container');
+  animatedElements.forEach((el, index) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = `opacity 0.6s ease ${index * 0.05}s, transform 0.6s ease ${index * 0.05}s`;
     observer.observe(el);
+  });
+
+  // Staggered animation for project cards specifically
+  const projectCards = document.querySelectorAll('.project-card');
+  projectCards.forEach((card, index) => {
+    card.style.transitionDelay = `${index * 0.1}s`;
   });
 });
 
