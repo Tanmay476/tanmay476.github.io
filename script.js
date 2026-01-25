@@ -1,6 +1,7 @@
 // Navigation scroll effect
 let lastScrollTop = 0;
 const nav = document.querySelector('nav');
+const backToTop = document.querySelector('.back-to-top');
 
 window.addEventListener('scroll', function() {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -12,8 +13,103 @@ window.addEventListener('scroll', function() {
     nav.classList.remove('scrolled');
   }
 
+  // Show/hide back to top button
+  if (backToTop) {
+    if (scrollTop > 300) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  }
+
   lastScrollTop = scrollTop;
 });
+
+// Back to top click handler
+if (backToTop) {
+  backToTop.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+// Dark mode toggle
+const themeToggle = document.querySelector('.theme-toggle');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+// Check for saved theme, default to light
+function getTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    return savedTheme;
+  }
+  return 'light'; // Default to light mode
+}
+
+// Apply theme
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+}
+
+// Initialize theme
+applyTheme(getTheme());
+
+// Toggle theme on click
+if (themeToggle) {
+  themeToggle.addEventListener('click', function() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    applyTheme(newTheme);
+  });
+}
+
+// Typed text animation
+const typedTextElement = document.querySelector('.typed-text');
+if (typedTextElement) {
+  const phrases = [
+    'Computer Engineering Student',
+    'Hardware Design Enthusiast',
+    'VLSI & FPGA Developer',
+    'Embedded Systems Engineer',
+    'Georgia Tech'
+  ];
+
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 100;
+
+  function typeText() {
+    const currentPhrase = phrases[phraseIndex];
+
+    if (isDeleting) {
+      typedTextElement.textContent = currentPhrase.substring(0, charIndex - 1);
+      charIndex--;
+      typingSpeed = 50;
+    } else {
+      typedTextElement.textContent = currentPhrase.substring(0, charIndex + 1);
+      charIndex++;
+      typingSpeed = 100;
+    }
+
+    if (!isDeleting && charIndex === currentPhrase.length) {
+      isDeleting = true;
+      typingSpeed = 2000; // Pause at end
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      typingSpeed = 500; // Pause before next phrase
+    }
+
+    setTimeout(typeText, typingSpeed);
+  }
+
+  // Start typing animation
+  setTimeout(typeText, 1000);
+}
 
 // Highlight current page in nav
 document.addEventListener('DOMContentLoaded', function() {
