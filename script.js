@@ -2,6 +2,7 @@
 let lastScrollTop = 0;
 const nav = document.querySelector('nav');
 const backToTop = document.querySelector('.back-to-top');
+const readingProgress = document.querySelector('.reading-progress');
 
 window.addEventListener('scroll', function() {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -20,6 +21,13 @@ window.addEventListener('scroll', function() {
     } else {
       backToTop.classList.remove('visible');
     }
+  }
+
+  // Update reading progress bar
+  if (readingProgress) {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    readingProgress.style.width = scrollPercent + '%';
   }
 
   lastScrollTop = scrollTop;
@@ -283,3 +291,31 @@ modalStyles.textContent = `
   }
 `;
 document.head.appendChild(modalStyles);
+
+// 3D Tilt Effect for Cards
+const tiltCards = document.querySelectorAll('.project-card, .featured-project, .skill-item, .tech-item');
+
+tiltCards.forEach(card => {
+  card.addEventListener('mousemove', function(e) {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = (y - centerY) / 20;
+    const rotateY = (centerX - x) / 20;
+
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+  });
+
+  card.addEventListener('mouseleave', function() {
+    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+    card.style.transition = 'transform 0.5s ease';
+  });
+
+  card.addEventListener('mouseenter', function() {
+    card.style.transition = 'transform 0.1s ease';
+  });
+});
