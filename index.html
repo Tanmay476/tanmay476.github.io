@@ -45,6 +45,20 @@
       <img src="assets/profile-photo.jpg" alt="Tanmay Shukla" class="hero-image">
       <h1>Tanmay Shukla</h1>
       <p class="tagline"><span class="typed-text"></span><span class="typed-cursor">|</span></p>
+      <p class="hero-summary">
+        Computer Engineering student at Georgia Tech focused on digital design, VLSI, and embedded systems. I build
+        verification-first hardware, from RTL to physical design, and ship reliable avionics and real-time systems.
+      </p>
+      <div class="hero-actions">
+        <a href="projects.html" class="btn btn-primary">
+          <i class="fas fa-rocket"></i>
+          View Projects
+        </a>
+        <a href="resume.html" class="btn btn-secondary">
+          <i class="fas fa-file-alt"></i>
+          View Resume
+        </a>
+      </div>
       <div class="hero-links">
         <a href="mailto:tshukla31@gatech.edu" class="hero-link" target="_blank">
           <i class="fas fa-envelope"></i>
@@ -59,34 +73,119 @@
     </div>
   </section>
 
+  <!-- Featured Work -->
+  <section class="featured-work-section">
+    <div class="container">
+      <h2 class="section-title">Featured Work</h2>
+      <p class="section-subtitle">A snapshot of recent hardware, verification, and embedded systems projects.</p>
+
+      <div class="featured-work-grid">
+        <article class="card featured-card fade-in-up">
+          <div class="featured-card-header">
+            <span class="featured-card-tag"><i class="fas fa-microchip"></i> ASIC & Verification</span>
+          </div>
+          <h3>64-Bit Calculator RTL + VLSI Flow</h3>
+          <p>
+            Built a complete RTL-to-GDSII flow with a UVM verification environment and 99% code coverage.
+            Highlights include dual-port SRAM integration and a modular testbench.
+          </p>
+          <div class="featured-card-actions">
+            <a href="projects.html#calculator" class="btn btn-secondary">Project Details</a>
+            <a href="https://github.com/tanmay476/64_Bit_Calculator_Verification" target="_blank" class="btn btn-primary">
+              <i class="fab fa-github"></i>
+              GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="card featured-card fade-in-up">
+          <div class="featured-card-header">
+            <span class="featured-card-tag"><i class="fas fa-rocket"></i> Avionics & PCB</span>
+          </div>
+          <h3>ADCS Flight Computer</h3>
+          <p>
+            Architected a PC104-based avionics stack with custom PCB design, high-speed sensors, robust power, and
+            telemetry for a two-stage rocket targeting the Kármán line.
+          </p>
+          <div class="featured-card-actions">
+            <a href="projects.html#adcs" class="btn btn-secondary">Project Details</a>
+            <a href="projects.html" class="btn btn-primary">
+              <i class="fas fa-images"></i>
+              See Photos
+            </a>
+          </div>
+        </article>
+
+        <article class="card featured-card fade-in-up">
+          <div class="featured-card-header">
+            <span class="featured-card-tag"><i class="fas fa-flask"></i> Research</span>
+          </div>
+          <h3>HLSFactory (SHARC Lab)</h3>
+          <p>
+            Scaled an open-source HLS dataset for AI-driven chip design, adding 100+ verified designs and enabling
+            20% faster synthesis throughput with automation.
+          </p>
+          <div class="featured-card-actions">
+            <a href="projects.html#hlsfactory" class="btn btn-secondary">Project Details</a>
+            <a href="https://github.com/sharc-lab/HLSFactory" target="_blank" class="btn btn-primary">
+              <i class="fab fa-github"></i>
+              GitHub
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- About & Skills Combined Section -->
   <section class="about-skills-section">
     <div class="container">
       <h2 class="section-title">About Me & Skills</h2>
-      <p class="section-subtitle">Building the future of hardware design</p>
+      <p class="section-subtitle">Building reliable, high-performance hardware systems from concept to silicon.</p>
 
       <div class="about-skills-wrapper">
         <div class="about-content fade-in-up">
           <h3>About Me</h3>
           <p class="about-text">
-            I'm a Computer Engineering student at Georgia Institute of Technology, specializing in digital design, VLSI, and embedded systems. I'm driven by a passion for building innovative hardware solutions that push the boundaries of performance and efficiency—from custom silicon to flight-critical avionics.
+            I'm a Computer Engineering student at Georgia Tech specializing in digital design, VLSI, and embedded systems.
+            I build verification-first hardware that scales from FPGA prototypes to tapeout-ready silicon.
           </p>
 
           <p class="about-text">
-            At Georgia Tech's SHARC Lab, I contribute to <strong>HLSFactory</strong>, an open-source High-Level Synthesis (HLS)→RTL automation framework that enables AI applications in high-level chip design, including using ML models to optimize latency, power and resource utilization of an HLS design mapped to RTL. I expanded HLSFactory's dataset by curating 100 open-source HLS designs and validating them via Vitis HLS. The framework demonstrates over 20% synthesis throughput speedup vs naive parallelism on 32 CPU cores.
+            At Georgia Tech's SHARC Lab, I contribute to <strong>HLSFactory</strong>, an open-source HLS→RTL automation framework
+            that applies ML models to optimize latency, power, and area. I expanded the dataset with 100+ open-source
+            designs and validated them via Vitis HLS, enabling 20% faster synthesis throughput versus naive parallelism
+            on 32 CPU cores.
           </p>
 
           <p class="about-text">
-            As a <strong>Design Verification Engineer</strong> with SiliconJackets, a student run ASIC design team at Georgia Tech, I develop SystemVerilog UVM testbenches to verify various hardware modules on our tapeout processors. Specificially, I developed a comprehensive UVM testbench for the Reorder Buffer (ROB) in an out-of-order RISC-V processor, verifying circular buffer allocation, result forwarding, and in-order retirement across parameterized fire/retire widths for silicon tapeout. I acheived code coverage of 99.5% and functional coverage of all meaningful scenarios to reigorously validate the ROB design.
+            As a <strong>Design Verification Engineer</strong> with SiliconJackets, I develop SystemVerilog UVM testbenches for
+            tapeout-bound processors. I built a comprehensive UVM environment for a Reorder Buffer (ROB) in an
+            out-of-order RISC-V core, validating allocation, forwarding, and in-order retirement across parameterized
+            widths with 99.5% code coverage.
           </p>
 
           <p class="about-text">
-            As <strong>Avionics Hardware Lead</strong> at Georgia Tech Experimental Rocketry, I'm architecting custom PC104 embedded systems for the first collegiate two-stage rocket to reach the Kármán line (100km altitude). I designed and routed the ADCS flight computer PCB from scratch in Altium, integrating high-speed sensors, robust power distribution, and telemetry systems. I also co-developed over 1000 lines of embedded C and Linux code implementing extended Kalman Filter algorithms for real-time state estimation and flight control.
+            As <strong>Avionics Hardware Lead</strong> at Georgia Tech Experimental Rocketry, I architect PC104 embedded systems
+            for a two-stage rocket targeting the Kármán line. I designed the ADCS flight computer PCB in Altium,
+            integrating high-speed sensors, robust power distribution, and telemetry. I co-developed 1,000+ lines of
+            embedded C and Linux code implementing an Extended Kalman Filter for real-time state estimation.
           </p>
 
           <p class="about-text">
-            I'm passionate about the intersection of hardware and software, whether that's designing RTL for FPGAs, routing PCBs for aerospace applications, or optimizing chip layouts for performance. I'm actively seeking opportunities in semiconductor design, chip architecture, FPGA development, and hardware verification where I can contribute to cutting-edge technologies.
+            I'm energized by the intersection of hardware and software: designing RTL, routing PCBs for aerospace
+            applications, and optimizing chip layouts for performance. I'm seeking opportunities in semiconductor
+            design, FPGA development, and hardware verification.
           </p>
+
+          <div class="about-achievements">
+            <h3>Impact Highlights</h3>
+            <ul>
+              <li>20% faster HLS synthesis throughput across 32 CPU cores with HLSFactory automation.</li>
+              <li>99.5% verification code coverage for an out-of-order RISC-V ROB using UVM.</li>
+              <li>Custom avionics stack for a two-stage rocket targeting 100km altitude.</li>
+            </ul>
+          </div>
         </div>
 
         <div class="skills-content fade-in-up" style="animation-delay: 0.1s;">
@@ -181,6 +280,24 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Let's build something mission-critical.</h2>
+      <p>Open to internships, research, and full-time roles in chip design, verification, and embedded systems.</p>
+      <div class="cta-buttons">
+        <a href="mailto:tshukla31@gatech.edu" class="btn btn-light">
+          <i class="fas fa-envelope"></i>
+          Contact Me
+        </a>
+        <a href="projects.html" class="btn btn-outline">
+          <i class="fas fa-layer-group"></i>
+          Explore Projects
+        </a>
       </div>
     </div>
   </section>

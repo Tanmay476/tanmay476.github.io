@@ -109,6 +109,10 @@
   background: var(--background);
 }
 
+[data-theme="dark"] .featured-work-section {
+  background: var(--background);
+}
+
 [data-theme="dark"] .skill-item {
   background: var(--background-card);
 }
