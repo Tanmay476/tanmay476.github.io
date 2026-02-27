@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanmay Shukla - Resume</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DN382NBP3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0DN382NBP3');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/resume.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">TS</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html" class="active">Resume</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="resume-header">
+    <div class="container">
+      <h1>Resume</h1>
+      <p>My academic journey and professional experience</p>
+    </div>
+  </header>
+
+  <!-- Resume Container -->
+  <div class="container resume-container">
+    <!-- Main Content -->
+    <main class="resume-main fade-in-up">
+      <!-- Resume PDF Section -->
+      <section class="resume-section">
+        <h2>Resume Preview</h2>
+        <div class="pdf-viewer">
+          <embed src="assets/ShuklaTanmayResume.pdf#page=1" type="application/pdf" class="pdf-embed">
+        </div>
+        <a href="assets/ShuklaTanmayResume.pdf" download class="download-button">
+          <i class="fas fa-download"></i>
+          Download Full Resume (PDF)
+        </a>
+      </section>
+
+      <!-- Relevant Coursework -->
+      <section class="resume-section">
+        <h2>Relevant Coursework</h2>
+        <div class="coursework-grid">
+          <div class="course-item">
+            <span class="course-name">ECE 2020: Digital Systems Design</span>
+            <span class="course-grade">Grade: A</span>
+          </div>
+          <div class="course-item">
+            <span class="course-name">ECE 2031: Digital Design Laboratory</span>
+            <span class="course-grade">Grade: A</span>
+          </div>
+          <div class="course-item">
+            <span class="course-name">ECE 2035: Programming for Hardware/Software Systems</span>
+            <span class="course-grade">Grade: A</span>
+          </div>
+          <div class="course-item">
+            <span class="course-name">ECE 2040: Circuit Analysis</span>
+            <span class="course-grade">Grade: A</span>
+          </div>
+          <div class="course-item">
+            <span class="course-name">ECE 3058: Computer Architecture</span>
+            <span class="course-grade">In Progress</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="resume-sidebar">
+      <!-- Contact Card -->
+      <div class="sidebar-card fade-in-up" style="animation-delay: 0.1s;">
+        <img src="assets/profile-photo.jpg" alt="Tanmay Shukla" class="sidebar-image">
+        <h3>Tanmay Shukla</h3>
+        <p>Computer Engineering Student<br>Georgia Institute of Technology</p>
+
+        <div class="sidebar-links">
+          <a href="mailto:tshukla31@gatech.edu" class="sidebar-link" target="_blank">
+            <i class="fas fa-envelope"></i>
+            Email Me
+          </a>
+          <a href="https://www.linkedin.com/in/tanmay-shukla-8a9153310" class="sidebar-link" target="_blank">
+            <i class="fab fa-linkedin"></i>
+            LinkedIn
+          </a>
+          <a href="https://github.com/tanmay476" class="sidebar-link" target="_blank">
+            <i class="fab fa-github"></i>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Tanmay Shukla. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

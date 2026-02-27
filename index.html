@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanmay Shukla - Computer Engineering Portfolio</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DN382NBP3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0DN382NBP3');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">TS</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="assets/profile-photo.jpg" alt="Tanmay Shukla" class="hero-image">
+      <h1>Tanmay Shukla</h1>
+      <p class="tagline"><span class="typed-text"></span><span class="typed-cursor">|</span></p>
+      <div class="hero-links">
+        <a href="mailto:tshukla31@gatech.edu" class="hero-link" target="_blank">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/tanmay-shukla-8a9153310" class="hero-link" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/tanmay476" class="hero-link" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Skills Combined Section -->
+  <section class="about-skills-section">
+    <div class="container">
+      <h2 class="section-title">About Me & Skills</h2>
+      <p class="section-subtitle">Building the future of hardware design</p>
+
+      <div class="about-skills-wrapper">
+        <div class="about-content fade-in-up">
+          <h3>About Me</h3>
+          <p class="about-text">
+            I'm a Computer Engineering student at Georgia Institute of Technology, specializing in digital design, VLSI, and embedded systems. I'm driven by a passion for building innovative hardware solutions that push the boundaries of performance and efficiency—from custom silicon to flight-critical avionics.
+          </p>
+
+          <p class="about-text">
+            At Georgia Tech's SHARC Lab, I contribute to <strong>HLSFactory</strong>, an open-source High-Level Synthesis (HLS)→RTL automation framework that enables AI applications in high-level chip design, including using ML models to optimize latency, power and resource utilization of an HLS design mapped to RTL. The framework demonstrates over 20% synthesis throughput speedup vs naive parallelism on 32 CPU cores. I expanded HLSFactory's dataset by curating 100 open-source HLS designs, across major academic venues using an agentic approach in a dockerized environment to automatically clone repos, extract HLS code, and generate synthesis reports.
+          </p>
+
+          <p class="about-text">
+            As a <strong>Design Verification Engineer</strong> with SiliconJackets, a student run ASIC design team at Georgia Tech, I develop SystemVerilog UVM testbenches to verify various hardware modules on our tapeout processors. Specificially, I developed a comprehensive UVM testbench for the Reorder Buffer (ROB) in an out-of-order RISC-V processor, verifying circular buffer allocation, result forwarding, and in-order retirement across parameterized fire/retire widths for silicon tapeout. I acheived code coverage of 99.5% and functional coverage of all meaningful scenarios to reigorously validate the ROB design.
+          </p>
+
+          <p class="about-text">
+            As <strong>Avionics Hardware Lead</strong> at Georgia Tech Experimental Rocketry, I'm architecting custom PC104 embedded systems for what we aim to bethe first collegiate two-stage rocket to reach the Kármán line (100km altitude). I designed and routed the ADCS flight computer PCB from scratch in Altium, integrating high-speed sensors, robust power distribution, and telemetry systems.
+          </p>
+
+          <p class="about-text">
+            I'm passionate about the intersection of hardware and software, whether that's designing RTL for FPGAs, routing PCBs for aerospace applications, or optimizing chip layouts for performance. I'm actively seeking opportunities in semiconductor design, chip architecture, FPGA development, and hardware verification where I can contribute to cutting-edge technologies.
+          </p>
+        </div>
+
+        <div class="skills-content fade-in-up" style="animation-delay: 0.1s;">
+          <h3>Technical Skills</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <h4><i class="fas fa-code"></i> Programming & Software</h4>
+              <p>C, C++, Python, Java, SQL, RISC-V Assembly, Linux, Git/GitHub, SolidWorks, Bash/Shell scripting, Machine Learning (ML) models (GNNs), PyTorch and TensorFlow</p>
+            </div>
+
+            <div class="skill-item">
+              <h4><i class="fas fa-microchip"></i> Hardware Design & Verification</h4>
+              <p>FPGA Development (Intel Quartus, Xilinx Vivado), RTL (VHDL, Verilog/SystemVerilog), Synopsys VCS, Cadence Xcelium and Innovus, Universal Verification Methodology (UVM), Verdi, Static Timing Analysis, VLSI & Physical Design, TCL</p>
+            </div>
+
+            <div class="skill-item">
+              <h4><i class="fas fa-cogs"></i> Embedded Systems & PCB Design</h4>
+              <p>PCB Design & Layout (Altium, KiCad), High-Level Synthesis (HLS), ARM Mbed, STM32, Teensy, Raspberry Pi, Arduino, RISC-V Architecture, Computer Systems, Embedded Linux, Circuit Analysis & Debugging, Oscilloscope, Logic Analyzer, UART, SPI, I²C</p>
+            </div>
+          </div>
+
+          <!-- Tech Stack -->
+          <h3 style="margin-top: 2rem;">Tech Stack</h3>
+          <div class="tech-stack-grid">
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+              <span>C</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+              <span>C++</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+              <span>Python</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+              <span>Java</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">
+              <span>Linux</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+              <span>Git</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch">
+              <span>PyTorch</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino">
+              <span>Arduino</span>
+            </div>
+            <div class="tech-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg" alt="Raspberry Pi">
+              <span>Raspberry Pi</span>
+            </div>
+            <div class="tech-item">
+              <img src="assets/icons/systemverilog.svg" alt="SystemVerilog">
+              <span>SystemVerilog</span>
+            </div>
+            <div class="tech-item">
+              <img src="assets/icons/verilog.svg" alt="Verilog">
+              <span>Verilog</span>
+            </div>
+            <div class="tech-item">
+              <img src="assets/icons/vhdl.svg" alt="VHDL">
+              <span>VHDL</span>
+            </div>
+            <div class="tech-item">
+              <img src="assets/icons/cadence.svg" alt="Cadence">
+              <span>Cadence</span>
+            </div>
+            <div class="tech-item">
+              <img src="assets/icons/synopsys.svg" alt="Synopsys">
+              <span>Synopsys</span>
+            </div>
+            <div class="tech-item">
+              <img src="assets/icons/xilinx.svg" alt="Xilinx Vivado">
+              <span>Xilinx Vivado</span>
+            </div>
+            <div class="tech-item">
+              <img src="assets/icons/intel.svg" alt="Intel Quartus">
+              <span>Intel Quartus</span>
+            </div>
+            <div class="tech-item">
+              <img src="assets/icons/altium.svg" alt="Altium">
+              <span>Altium</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Tanmay Shukla. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

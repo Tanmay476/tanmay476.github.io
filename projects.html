@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanmay Shukla - Projects</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DN382NBP3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0DN382NBP3');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">TS</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="projects-header">
+    <div class="container">
+      <h1>My Projects</h1>
+      <p>Hardware design, verification, and embedded systems work from coursework, research, and personal initiatives</p>
+    </div>
+  </header>
+
+  <!-- Projects Container -->
+  <div class="container projects-container">
+
+    <!-- Category Filters -->
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="all">
+        <i class="fas fa-th-large"></i> All
+      </button>
+      <button class="filter-btn" data-filter="projects">
+        <i class="fas fa-microchip"></i> Projects
+      </button>
+      <button class="filter-btn" data-filter="research">
+        <i class="fas fa-flask"></i> Research
+      </button>
+    </div>
+
+    <!-- Featured Project: 64-Bit Calculator VLSI -->
+    <div class="featured-project fade-in-up" data-category="projects">
+      <span class="featured-badge"><i class="fas fa-star"></i> Featured Project</span>
+      <div class="featured-content">
+        <div class="featured-info">
+          <h2>64-Bit Calculator RTL Design & VLSI Implementation</h2>
+          <p class="featured-subtitle">Complete ASIC design flow from SystemVerilog RTL through physical implementation in Cadence Innovus, with a modular verification environment structured around UVM methodology achieving 97%+ code coverage.</p>
+
+          <div class="project-skills">
+            <span class="skill-tag">SystemVerilog</span>
+            <span class="skill-tag">SystemVerilog TB</span>
+            <span class="skill-tag">Cadence Innovus</span>
+            <span class="skill-tag">Synopsys VCS</span>
+            <span class="skill-tag">Verdi</span>
+            <span class="skill-tag">TCL</span>
+            <span class="skill-tag">Sky130 PDK</span>
+          </div>
+
+          <div class="feature-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-layer-group"></i>
+              <div>
+                <strong>Full ASIC Flow</strong>
+                <span>RTL to GDSII layout</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-double"></i>
+              <div>
+                <strong>97%+ Code Coverage</strong>
+                <span>Modular SystemVerilog testbench</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-memory"></i>
+              <div>
+                <strong>Dual-Port SRAM</strong>
+                <span>Sky130 macro integration</span>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            Designed a memory-based 64-bit calculator with FSM-based controller managing read, add, and write operations across dual 32-bit Sky130 SRAM blocks. The architecture features a 32-bit ripple-carry adder and result buffering for pipelined operation.
+          </p>
+          <p>
+            Built a modular verification environment structured around UVM methodology with driver, monitor, sequencer, and scoreboard components. Includes SystemVerilog Assertions for protocol checking, directed test cases for edge conditions, and randomized transactions.
+          </p>
+
+          <div class="project-links" style="border-top: none; padding-top: 0.5rem;">
+            <a href="https://github.com/tanmay476/64_Bit_Calculator_Verification" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+        <div class="featured-images">
+          <img src="assets/calculator-vlsi.png" alt="64-Bit Calculator VLSI Layout in Cadence Innovus" class="project-image-full">
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <h2 class="section-divider"><span>All Projects</span></h2>
+
+    <div class="projects-grid">
+
+      <!-- ADCS Flight Computer -->
+      <div class="project-card fade-in-up" data-category="projects">
+        <div class="project-header">
+          <span class="project-type"><i class="fas fa-rocket"></i> Aerospace & PCB</span>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">ADCS Flight Computer for Georgia Tech Rocketry</h3>
+          <div class="project-skills">
+            <span class="skill-tag">Altium Designer</span>
+            <span class="skill-tag">PCB Design</span>
+            <span class="skill-tag">Embedded C</span>
+            <span class="skill-tag">Kalman Filter</span>
+            <span class="skill-tag">PC104</span>
+          </div>
+
+          <p class="project-description">
+            Attitude Determination & Control Systems board for the first collegiate two-stage rocket targeting the Karman line (100km altitude).
+          </p>
+
+          <div class="project-details">
+            <div class="detail-section">
+              <h4><i class="fas fa-drafting-compass"></i> Hardware Design</h4>
+              <ul>
+                <li>Custom PC104 stack architecture</li>
+                <li>High-speed IMU, barometer, GPS integration</li>
+                <li>Multi-rail power distribution</li>
+                <li>Real-time telemetry system</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-code"></i> Embedded Software</h4>
+              <ul>
+                <li>Flight Control algorithms in embedded C & Linux</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-images">
+            <img src="assets/ADCS.jpg" alt="ADCS Board" class="project-image-full">
+          </div>
+        </div>
+      </div>
+
+      <!-- Pipelined Ethernet Packet Processor -->
+      <div class="project-card fade-in-up" data-category="projects">
+        <div class="project-header">
+          <span class="project-type"><i class="fas fa-network-wired"></i> Digital Design</span>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Pipelined Ethernet/IPv4/UDP Packet Processor</h3>
+          <div class="project-skills">
+            <span class="skill-tag">SystemVerilog</span>
+            <span class="skill-tag">FPGA</span>
+            <span class="skill-tag">AXI-Stream</span>
+            <span class="skill-tag">Network Protocols</span>
+          </div>
+
+          <p class="project-description">
+            High-throughput hardware packet parser achieving wire-speed processing for network applications.
+          </p>
+
+          <div class="project-details">
+            <div class="detail-section">
+              <h4><i class="fas fa-tachometer-alt"></i> Performance</h4>
+              <ul>
+                <li>1 packet per cycle throughput</li>
+                <li>AXI-Stream compliant interfaces</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-shield-alt"></i> Features</h4>
+              <ul>
+                <li>IPv4 & UDP checksum validation</li>
+                <li>MAC/IP/port metadata extraction</li>
+                <li>Malformed packet detection</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/Tanmay476/eth-ipv4-udp-pipeline" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Servo Peripheral Controller -->
+      <div class="project-card fade-in-up" data-category="projects">
+        <div class="project-header">
+          <span class="project-type"><i class="fas fa-microchip"></i> FPGA Design</span>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Servo Peripheral Controller in VHDL</h3>
+          <div class="project-skills">
+            <span class="skill-tag">VHDL</span>
+            <span class="skill-tag">FPGA</span>
+            <span class="skill-tag">PWM</span>
+            <span class="skill-tag">Intel Quartus</span>
+            <span class="skill-tag">DE10-Lite</span>
+            <span class="skill-tag">SCOMP CPU</span>
+          </div>
+
+          <p class="project-description">
+            Custom memory-mapped FPGA peripheral integrated with the SCOMP 16-bit soft-core processor, generating precise PWM signals for RC servo control with hardware-guaranteed timing.
+          </p>
+
+          <div class="project-details">
+            <div class="detail-section">
+              <h4><i class="fas fa-bullseye"></i> Hardware Specs</h4>
+              <ul>
+                <li>4 independent servo channels (50 Hz PWM)</li>
+                <li>7-bit position control (128 positions, ~1.4° resolution)</li>
+                <li>PLL-derived 71 kHz clock for sub-microsecond accuracy</li>
+                <li>Double-buffered updates for glitch-free operation</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-cogs"></i> Architecture</h4>
+              <ul>
+                <li>Memory-mapped I/O interface (addresses 0x50-0x53)</li>
+                <li>HSPG module with FSM-based pulse generation</li>
+                <li>Cross-clock domain synchronization</li>
+                <li>Only 5% logic element utilization on MAX 10</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/Tanmay476/Servo-Peripheral-designed-in-VHDL" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mbed Game - Enhanced -->
+      <div class="project-card fade-in-up" data-category="projects">
+        <div class="project-header">
+          <span class="project-type"><i class="fas fa-gamepad"></i> Embedded Systems</span>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Missile Blaster - Mbed Arcade Game</h3>
+          <div class="project-skills">
+            <span class="skill-tag">C/C++</span>
+            <span class="skill-tag">ARM Mbed LPC1768</span>
+            <span class="skill-tag">uLCD Display</span>
+            <span class="skill-tag">Real-time Systems</span>
+          </div>
+
+          <p class="project-description">
+            Classic Missile Command-inspired arcade game built for resource-constrained ARM microcontroller, demonstrating real-time embedded programming and hardware interfacing skills.
+          </p>
+
+          <div class="project-details">
+            <div class="detail-section">
+              <h4><i class="fas fa-crosshairs"></i> Gameplay</h4>
+              <ul>
+                <li>Defend cities from incoming missiles</li>
+                <li>Real-time turret control & firing</li>
+                <li>Progressive difficulty scaling</li>
+                <li>Score tracking & game states</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-plug"></i> Hardware Integration</h4>
+              <ul>
+                <li>128x128 color LCD graphics</li>
+                <li>5-way navigation switch input</li>
+                <li>Speaker audio effects</li>
+                <li>Optional accelerometer controls</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-code"></i> Software Architecture</h4>
+              <ul>
+                <li>Modular component design</li>
+                <li>Custom linked list for entities</li>
+                <li>Collision detection algorithms</li>
+                <li>Memory-optimized for MCU</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/tanmay476/Mbed-Missile-Blaster-Game-in-C" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- HLSFactory - SHARC Lab Research -->
+      <div class="project-card fade-in-up" data-category="research">
+        <div class="project-header">
+          <span class="project-type"><i class="fas fa-flask"></i> Research</span>
+          <span class="award-badge"><i class="fas fa-university"></i> SHARC Lab</span>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">HLSFactory: Scaling HLS Datasets for AI-Driven Chip Design</h3>
+          <div class="project-skills">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Vitis HLS</span>
+            <span class="skill-tag">LLMs</span>
+            <span class="skill-tag">ML for EDA</span>
+            <span class="skill-tag">C/C++</span>
+            <span class="skill-tag">Web Scraping</span>
+          </div>
+
+          <p class="project-description">
+            Contributing to an open-source framework for constructing large-scale HLS datasets to enable machine learning research in hardware design automation at Georgia Tech's SHARC Lab.
+          </p>
+
+          <div class="project-details">
+            <div class="detail-section">
+              <h4><i class="fas fa-search"></i> Automated Discovery</h4>
+              <ul>
+                <li>Built Python scrapers for IEEE, ACM, arXiv, DBLP</li>
+                <li>Collected 2,500+ papers spanning 25+ venues</li>
+                <li>Curated 100+ open-source HLS designs</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-robot"></i> LLM-Based Extraction</h4>
+              <ul>
+                <li>Automated kernel identification from repos</li>
+                <li>Dependency graph extraction</li>
+                <li>TCL synthesis script generation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/sharc-lab/HLSFactory" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Graphene Supercapacitors -->
+      <div class="project-card fade-in-up" data-category="research">
+        <div class="project-header">
+          <span class="project-type"><i class="fas fa-flask"></i> Research</span>
+          <span class="award-badge"><i class="fas fa-trophy"></i> 1st Place National</span>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Graphene Supercapacitors Research</h3>
+          <div class="project-skills">
+            <span class="skill-tag">Nanomaterials</span>
+            <span class="skill-tag">Electrochemistry</span>
+            <span class="skill-tag">Energy Storage</span>
+            <span class="skill-tag">Data Analysis</span>
+          </div>
+
+          <p class="project-description">
+            Independent research investigating graphene-based supercapacitors as high-performance alternatives to traditional electric double-layer capacitors (EDLCs).
+          </p>
+
+          <div class="project-details">
+            <div class="detail-section">
+              <h4><i class="fas fa-chart-line"></i> Results</h4>
+              <ul>
+                <li>40% higher energy density vs traditional EDLCs</li>
+                <li>Comparable power density maintained</li>
+                <li>Improved charge/discharge cycles</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-award"></i> Recognition</h4>
+              <ul>
+                <li>1st place - National Science Fair</li>
+                <li>Competed against 3,000+ students</li>
+                <li>Featured at Oman American Business Center</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PID Robot -->
+      <div class="project-card fade-in-up" data-category="projects">
+        <div class="project-header">
+          <span class="project-type"><i class="fas fa-robot"></i> Robotics</span>
+          <span class="award-badge"><i class="fas fa-trophy"></i> 1st Place</span>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">PID Line-Following & Bluetooth Robot</h3>
+          <div class="project-skills">
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">PID Control</span>
+            <span class="skill-tag">Bluetooth HC05</span>
+            <span class="skill-tag">SolidWorks</span>
+          </div>
+
+          <p class="project-description">
+            Competition-winning robot featuring dual control modes: autonomous PID-based line following and manual Bluetooth control via PS5 controller.
+          </p>
+
+          <div class="project-details">
+            <div class="detail-section">
+              <h4><i class="fas fa-sliders-h"></i> Control Systems</h4>
+              <ul>
+                <li>Tuned PID controller for smooth tracking</li>
+                <li>IR sensor array for line detection</li>
+                <li>Bluetooth serial communication</li>
+                <li>PS5 controller integration</li>
+              </ul>
+            </div>
+            <div class="detail-section">
+              <h4><i class="fas fa-trophy"></i> Competition</h4>
+              <ul>
+                <li>1st place at Modern College</li>
+                <li>500+ student competitors</li>
+                <li>Schools & universities across Oman</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-images">
+            <img src="assets/Robot.jpg" alt="PID Robot" class="project-image-full">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Tanmay Shukla. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Project filtering functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card, .featured-project');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Update active button
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+
+          const filter = this.dataset.filter;
+
+          projectCards.forEach(card => {
+            if (filter === 'all') {
+              card.style.display = '';
+              card.style.animation = 'fadeInUp 0.5s ease-out forwards';
+            } else {
+              const categories = card.dataset.category || '';
+              if (categories.includes(filter)) {
+                card.style.display = '';
+                card.style.animation = 'fadeInUp 0.5s ease-out forwards';
+              } else {
+                card.style.display = 'none';
+              }
+            }
+          });
+        });
+      });
+    });
+  </script>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+</body>
+</html>
